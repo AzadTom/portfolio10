@@ -2,6 +2,7 @@ import type { Metadata} from "next";
 import { Oswald, Geist, Open_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import LenisProvider from "@/src/components/LenisProvider";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -36,7 +37,9 @@ export default function RootLayout({
         openSans.variable,
       )}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <LenisProvider>{children}</LenisProvider>
+      </body>
     </html>
   );
 }
