@@ -1,3 +1,4 @@
+import Experiece from "@/src/components/Experiece";
 import Footer from "@/src/components/Footer";
 import HeroSection from "@/src/components/HeroSection";
 import SkillSection from "@/src/components/SkillSection";
@@ -7,6 +8,7 @@ export default function Home() {
     <main className="px-5 sm:px-6">
       <HeroSection />
       <SkillSection/>
+      <Experiece/>
       <Footer/>
     </main>
   );
