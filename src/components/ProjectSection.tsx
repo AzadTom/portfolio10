@@ -66,6 +66,7 @@ const ProjectItem = (props: TProjectDataList & { position: number }) => {
           src={imgUrl}
           alt="Project preview"
           fill
+          quality={100}
           sizes="100vw"
           className=""
         />
