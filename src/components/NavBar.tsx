@@ -4,7 +4,7 @@ const navLinks = ["Behance", "LinkedIn", "View Resume"];
 
 const NavBar = () => {
   return (
-    <header className="flex w-full  flex-col gap-4 py-5 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+    <header className="flex w-full  flex-col  gap-4 py-5 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
       <Image
         src="/img/sign.svg"
         alt="Nidhi Portfolio logo"
@@ -15,7 +15,7 @@ const NavBar = () => {
       />
       <nav
         aria-label="Primary"
-        className="flex flex-wrap items-center gap-x-5 gap-y-2 text-base font-normal text-color1 sm:justify-end sm:gap-x-8"
+        className="flex justify-between items-center gap-x-5 gap-y-2 text-base font-normal text-color1 sm:justify-end sm:gap-x-8"
       >
         {navLinks.map((link) => (
           <a

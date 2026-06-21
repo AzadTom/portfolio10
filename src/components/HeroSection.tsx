@@ -7,10 +7,10 @@ const HeroSection = () => {
   return (
     <>
       <NavBar />
-      <section className="-translate-y-24">
+      <section className="pt-2 lg:pt-0">
         <div
           id="hero"
-          className="grid items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16"
+          className="grid items-start gap-12 lg:min-h-[calc(100dvh-6.5rem)] lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-16"
         >
           <div className="max-w-2xl flex flex-col items-start">
             <h1 className="max-w-3xl text-4xl font-bold leading-[0.95] tracking-[-0.06em] text-color2 sm:text-5xl lg:text-[4.2rem] xl:text-[4.9rem]">
@@ -25,15 +25,15 @@ const HeroSection = () => {
               existing mental models and technical expertise while enabling
               gradual adoption of complex systems &amp; technologies.
             </p>
-           <div className="mt-10 w-fit self-start">
-             <SpinningText text="Explore Work" >
+            <div className="mt-10 w-fit self-start fixed right-5 z-50 bottom-5 sm:block sm:static">
+              <SpinningText text="Explore Work">
               <ArrowDown className="h-14 w-14 text-slate-900 bg-[#E6E9F0] rounded-full p-4" />
-            </SpinningText>
-           </div>
+              </SpinningText>
+            </div>
           </div>
 
-          <div className="w-full">
-            <article className="relative aspect-4/5 w-full overflow-hidden sm:aspect-5/4 lg:aspect-5/6">
+          <div className="w-full -translate-y-24">
+            <article className="relative aspect-4/5 w-full overflow-hidden sm:aspect-5/4 lg:h-[60vh] lg:aspect-auto">
               <Image
                 src="/img/hero_img.svg"
                 alt="Hero photo"
