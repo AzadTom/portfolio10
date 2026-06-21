@@ -1,6 +1,4 @@
-'use client';
-import { SwiperSlide } from "swiper/react";
-import SwiperUtils from "./Swiper/Swiper";
+import WorkflowScrollbarSwiper from "./WorkflowScrollbarSwiper";
 import { skillGroups, workflowCards } from "./utility/constant";
 import { Container, H1, H2, Layout, P, Section } from "./utility/Utility";
 
@@ -41,7 +39,7 @@ const SkillSection = () => {
               key={group.title}
               className="border-t border-slate-200 pt-8"
             >
-              <Container className="grid gap-6 lg:grid-cols-[220px_1fr] lg:gap-10">
+              <Container className="grid min-w-0 gap-6 lg:grid-cols-[220px_1fr] lg:gap-10">
                 <H2 className="text-base font-medium uppercase tracking-[0.18em] text-color2 font-open-sans">
                   {group.title}
                 </H2>
@@ -59,12 +57,12 @@ const SkillSection = () => {
       <Section>
         <Container className="mt-12 space-y-8">
           <Container className="border-t border-slate-200 pt-8">
-            <Container className="grid gap-6 lg:grid-cols-[220px_1fr] lg:gap-10">
+              <Container className="grid min-w-0 gap-6 lg:grid-cols-[220px_1fr] lg:gap-10">
               <H2 className="font-open-sans text-base font-medium uppercase tracking-[0.18em] text-color2">
                 AI IN MY WORKFLOW
               </H2>
 
-              <Container className="grid gap-4  md:grid-cols-2 xl:grid-cols-5">
+              <Container className="hidden gap-4 md:grid md:grid-cols-2 xl:grid-cols-5">
                 {workflowCards.map(({ title, Icon, bullets }) => (
                   <Container
                     key={title}
@@ -86,6 +84,8 @@ const SkillSection = () => {
                   </Container>
                 ))}
               </Container>
+
+              <WorkflowScrollbarSwiper cards={workflowCards} />
             </Container>
           </Container>
         </Container>
