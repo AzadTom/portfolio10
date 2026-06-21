@@ -52,8 +52,8 @@ const ProjectItem = (props: TProjectDataList & { position: number }) => {
         </Link>
       </div>
       <P className="text-color1 font-sans mt-5">{subheading}</P>
-      {date && <p className="text-color3 text-sm">{date}</p>}
-      <div className="flex justify-end sm:hidden">
+      {date && <p className="text-color3 text-sm mt-5">{date}</p>}
+      <div className="flex justify-end sm:hidden mt-5 sm:mt-0">
         <Link
           href={link}
           className="flex items-center gap-1 border border-[#3D3D3D] bg-[#EEEEEE] rounded-[8px] font-sans px-2 py-1 text-sm  whitespace-nowrap"

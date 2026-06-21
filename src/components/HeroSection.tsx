@@ -13,14 +13,14 @@ const HeroSection = () => {
           className="grid items-start gap-12 lg:min-h-[calc(100dvh-6.5rem)] lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-16"
         >
           <div className="max-w-2xl flex flex-col items-start">
-            <h1 className="max-w-3xl text-4xl font-bold leading-[0.95] tracking-[-0.06em] text-color2 sm:text-5xl lg:text-[4.2rem] xl:text-[4.9rem]">
+            <h1 className="max-w-3xl text-5xl font-bold leading-[0.95] tracking-[-0.06em] text-color2 sm:text-5xl lg:text-[4.2rem] xl:text-[4.9rem]">
               Meeting users at their level of{" "}
               <span className="block text-color3">
                 familiarity &amp; readiness.
               </span>
             </h1>
 
-            <p className="mt-6 max-w-xl text-base leading-7 text-color1 sm:text-lg font-sans">
+            <p className="mt-6 max-w-xl text-base leading-7 text-color1 sm:text-lg font-open-sans">
               Designing intuitive experiences that align with users&apos;
               existing mental models and technical expertise while enabling
               gradual adoption of complex systems &amp; technologies.
