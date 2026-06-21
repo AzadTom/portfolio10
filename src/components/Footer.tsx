@@ -19,7 +19,7 @@ const Footer = () => {
           </a>
         </nav>
 
-        <div className="text-right">
+        <div className="text-left">
           <a
             href="mailto:kumarinidhiofficial@gmail.com"
             className="block text-lg font-semibold tracking-[-0.03em] text-[#5A6782] transition-colors hover:text-color2 sm:text-xl"
