@@ -32,15 +32,15 @@ const WorkflowScrollbarSwiper = ({ cards }: WorkflowScrollbarSwiperProps) => {
         className="workflow-scrollbar-swiper"
         breakpoints={{
           360: {
-            slidesPerView: 1.2,
+            slidesPerView: 1,
             spaceBetween: 12,
           },
           480: {
-            slidesPerView: 1.2,
+            slidesPerView: 1,
             spaceBetween: 14,
           },
           640: {
-            slidesPerView: 1.2,
+            slidesPerView: 1,
             spaceBetween: 16,
           },
         }}
@@ -52,7 +52,7 @@ const WorkflowScrollbarSwiper = ({ cards }: WorkflowScrollbarSwiperProps) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.35 }}
               transition={{ duration: 0.35, ease: "easeOut" }}
-              className="min-h-[15rem] rounded-[1.4rem] bg-[#FBE7F2] p-4 text-[#EC407A] shadow-[0_1px_0_rgba(15,23,42,0.04)]"
+              className="h-[360px] rounded-[1.4rem] bg-[#FBE7F2] p-4 text-[#EC407A] shadow-[0_1px_0_rgba(15,23,42,0.04)]"
             >
               <div className="flex items-center gap-2 font-open-sans text-base font-medium">
                 <Icon className="h-5 w-5 shrink-0" strokeWidth={2} />

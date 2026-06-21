@@ -1,3 +1,4 @@
+'use client';
 import WorkflowScrollbarSwiper from "./WorkflowScrollbarSwiper";
 import { skillGroups, workflowCards } from "./utility/constant";
 import { Container, H1, H2, Layout, P, Section } from "./utility/Utility";

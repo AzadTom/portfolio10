@@ -1,6 +1,19 @@
 import Image from "next/image";
 
-const navLinks = ["Behance", "LinkedIn", "View Resume"];
+const navLinks = [
+  {
+    text: "Behance",
+    link: "https://www.behance.net/itskumarinidhi",
+  },
+  {
+    text: "LinkedIn",
+    link: "https://www.linkedin.com/in/itskumarinidhi/",
+  },
+  {
+    text: "View Resume",
+    link: "https://docs.google.com/document/d/1HogOdQPl1yLDVYe1qOnSp69qHTPoZfklt1_mWimFTz8/edit?tab=t.0#heading=h.lalmg77ho64o",
+  },
+];
 
 const NavBar = () => {
   return (
@@ -19,11 +32,11 @@ const NavBar = () => {
       >
         {navLinks.map((link) => (
           <a
-            key={link}
+            key={link.link}
             href="#"
             className="transition-colors hover:text-color1 border-b border-b-color1"
           >
-            {link}
+            {link.text}
           </a>
         ))}
         <a
