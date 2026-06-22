@@ -58,7 +58,8 @@ export default function NavBar() {
           href="#contact"
           className="rounded-full bg-[#4585CA] px-5 py-3 text-white transition-all duration-300 hover:-translate-y-1"
         >
-          Let's Talk
+          {`
+          Let's Talk`}
         </Link>
       </nav>
 
@@ -72,7 +73,7 @@ function MobileNav() {
   return (
     <Sheet>
       {/* Hamburger */}
-      <SheetTrigger asChild className="sm:hidden">
+      <SheetTrigger  className="sm:hidden">
         <button
           className="
       flex h-11 w-14 flex-col items-center justify-center gap-1.5
@@ -95,7 +96,7 @@ function MobileNav() {
           <div className="flex items-center justify-between">
             <Image src="/img/sign.svg" alt="logo" width={120} height={40} />
 
-            <SheetClose asChild>
+            <SheetClose >
               <button className="flex h-11 w-11 items-center justify-center rounded-full bg-white shadow-sm">
                 <X size={18} />
               </button>
@@ -106,7 +107,7 @@ function MobileNav() {
           <nav className="mt-16 flex flex-1 flex-col gap-5">
             {navLinks.map((item) => (
               <SheetClose
-                asChild
+                
                 key={item.text}
                 className="flex justify-start"
               >
@@ -132,7 +133,7 @@ function MobileNav() {
           </nav>
 
           {/* Bottom Button */}
-          <SheetClose asChild>
+          <SheetClose >
             <Link
               href="#contact"
               className="
@@ -145,7 +146,8 @@ function MobileNav() {
                 shadow-lg
               "
             >
-              Let's Talk
+              {`
+              Let's Talk`}
             </Link>
           </SheetClose>
         </div>
