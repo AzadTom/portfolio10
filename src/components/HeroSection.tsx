@@ -4,12 +4,12 @@ import Image from "next/image";
 import NavBar from "./NavBar";
 import { SpinningText } from "./shadcn-space/spinning-text/spinning-text-02";
 import { ArrowDown } from "lucide-react";
-import { motion } from "motion/react";
+import { motion,type Variants  } from "motion/react";
 
 const title = ["Meeting", "users", "at", "their", "level", "of"];
 const subtitle = ["familiarity", "&", "readiness."];
 
-const container = {
+const container:Variants = {
   hidden: {},
   visible: {
     transition: {
@@ -18,7 +18,7 @@ const container = {
   },
 };
 
-const item = {
+const item:Variants = {
   hidden: {
     opacity: 0,
     y: 30,
