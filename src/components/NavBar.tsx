@@ -11,6 +11,9 @@ import {
   SheetClose,
 } from '@/components/ui/sheet';
 
+
+
+
 const navLinks = [
   {
     text: 'Projects',
@@ -63,115 +66,86 @@ export default function NavBar() {
       </nav>
 
       {/* Mobile Menu */}
-      <Sheet>
-        {/* Hamburger */}
-        <SheetTrigger asChild className="sm:hidden">
-          <button className="flex h-11 w-11 items-center justify-center rounded-full border border-zinc-200 bg-white shadow-sm transition hover:shadow-md">
-            <Menu size={20} />
-          </button>
-        </SheetTrigger>
+     <MobileNav/>
+    </header>
+  );
+}
 
-        {/* Fullscreen Menu */}
-        <SheetContent
-          side="right"
-          className="w-full border-none bg-[#FAF8F5] p-0 [&>button]:hidden"
-        >
-          <div className="flex h-full flex-col justify-between px-8 py-8">
-            {/* Top */}
-            <div>
-              <div className="flex items-center justify-between">
-                <Image
-                  src="/img/sign.svg"
-                  alt="logo"
-                  width={120}
-                  height={40}
-                />
+function MobileNav() {
+  return (
+     <Sheet>
+      {/* Hamburger */}
+      <SheetTrigger asChild className="sm:hidden">
+        <button className="flex h-11 w-11 items-center justify-center rounded-full border border-zinc-200 bg-white">
+          <Menu size={20} />
+        </button>
+      </SheetTrigger>
 
-                {/* Custom Close Button */}
-                <SheetClose asChild>
-                  <button
-                    className="
-                    flex
-                    h-12
-                    w-12
-                    items-center
-                    justify-center
-                    rounded-full
-                    border
-                    border-zinc-200
-                    bg-white/80
-                    shadow-md
-                    backdrop-blur-xl
-                    transition-all
-                    duration-500
-                    hover:rotate-90
-                    hover:scale-105
-                  "
-                  >
-                    <X
-                      size={18}
-                      strokeWidth={1.5}
-                      className="text-slate-700"
-                    />
-                  </button>
-                </SheetClose>
-              </div>
+      <SheetContent
+        side="right"
+        className="w-full border-none bg-[#f8f8f6] p-0 [&>button]:hidden"
+      >
+        <div className="flex h-full flex-col px-8 pb-8 pt-6">
+          {/* Top */}
+          <div className="flex items-center justify-between">
+            <Image
+              src="/img/sign.svg"
+              alt="logo"
+              width={120}
+              height={40}
+            />
 
-              {/* Navigation */}
-              <nav className="mt-24 flex flex-col">
-                {navLinks.map((item) => (
-                  <SheetClose asChild key={item.text}>
-                    <Link
-                      href={item.link}
-                      className="
-                        border-b border-zinc-200 py-6
-                        text-[38px]
-                        font-extralight
-                        leading-none
-                        tracking-tight
-                        text-slate-700
-                        transition-all
-                        duration-300
-                        hover:translate-x-2
-                      "
-                    >
-                      {item.text}
-                    </Link>
-                  </SheetClose>
-                ))}
-              </nav>
-            </div>
+            <SheetClose asChild >
+              <button className="flex h-11 w-11 items-center justify-center rounded-full bg-white shadow-sm">
+                <X size={18} />
+              </button>
+            </SheetClose>
+          </div>
 
-            {/* Bottom */}
-            <div className="space-y-8">
-              <SheetClose asChild>
+          {/* Links */}
+          <nav className="mt-16 flex flex-1 flex-col gap-5">
+            {navLinks.map((item) => (
+              <SheetClose asChild key={item.text} className="flex justify-start">
                 <Link
-                  href="#contact"
+                  href={item.link}
                   className="
-                    inline-flex
-                    items-center
-                    gap-2
-                    rounded-full
-                    bg-[#4585CA]
-                    px-8
                     py-4
-                    text-lg
+                    text-left
+                    text-5xl
                     font-medium
-                    text-white
-                    shadow-lg
-                    transition-all
-                    duration-300
-                    hover:-translate-y-1
+                    leading-none
+                    tracking-tight
+                    text-zinc-900
+                    transition-transform
+                    duration-200
+                    hover:translate-x-1
                   "
                 >
-                  Let's Talk
-                  <span>→</span>
+                  {item.text}
                 </Link>
               </SheetClose>
-            </div>
-          </div>
-        </SheetContent>
-      </Sheet>
-    </header>
+            ))}
+          </nav>
+
+          {/* Bottom Button */}
+          <SheetClose asChild>
+            <Link
+              href="#contact"
+              className="
+                flex h-14 items-center justify-center
+                rounded-full
+                bg-[#4585CA]
+                text-base
+                font-semibold
+                text-white
+                shadow-lg
+              "
+            >
+              Let's Talk
+            </Link>
+          </SheetClose>
+        </div>
+      </SheetContent>
+    </Sheet>
   );
 }
