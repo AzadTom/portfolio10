@@ -32,8 +32,8 @@ const NavBar = () => {
       >
         {navLinks.map((link) => (
           <a
-            key={link.link}
-            href="#"
+            key={link.link} 
+            href={link.link}
             className="transition-colors hover:text-color1 border-b border-b-color1"
           >
             {link.text}
