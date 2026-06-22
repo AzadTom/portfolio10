@@ -5,7 +5,7 @@ import { ArrowDown } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <>
+    <section className="">
       <NavBar />
       <section className="pt-2 lg:pt-0">
         <div
@@ -46,7 +46,7 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-    </>
+    </section>
   );
 };
 
