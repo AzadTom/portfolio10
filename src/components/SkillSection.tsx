@@ -20,10 +20,10 @@ const SkillChip = ({ label, Icon }: SkillChipProps) => {
 const SkillSection = () => {
   return (
     <Layout>
-      <Container>
+      <Container className="mt-25">
         <H1 className="text-color2">
           What I Bring to the Table :
-          <span className="text-color3">Skills & Expertise</span>
+          <span className="text-color3"> Skills & Expertise</span>
         </H1>
         <P className="mt-5 max-w-3xl font-open-sans text-color1">
           4 years of designing digital products across generative-AI,

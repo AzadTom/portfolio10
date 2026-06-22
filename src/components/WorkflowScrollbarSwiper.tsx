@@ -84,12 +84,12 @@ const WorkflowScrollbarSwiper = ({ cards }: WorkflowScrollbarSwiperProps) => {
           bottom: 0;
           width: 100%;
           height: 4px;
-          background: rgba(69, 133, 202, 0.12);
+          background: #FBE7F2;
           border-radius: 9999px;
         }
 
         .workflow-scrollbar-swiper .swiper-scrollbar-drag {
-          background: #4585ca;
+          background: #EC407A;
           border-radius: 9999px;
         }
       `}</style>

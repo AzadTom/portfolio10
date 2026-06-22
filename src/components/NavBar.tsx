@@ -34,14 +34,14 @@ const NavBar = () => {
           <a
             key={link.link} 
             href={link.link}
-            className="transition-colors hover:text-color1 border-b border-b-color1"
+            className="transition-colors hover:text-color1 border-b border-b-color1 font-open-sans"
           >
             {link.text}
           </a>
         ))}
         <a
           href="#contact"
-          className="rounded-full bg-[#4585CA] px-4 py-2 font-medium text-white shadow-sm transition-transform hover:-translate-y-0.5 hover:bg-[#4585CA]"
+          className="font-open-sans rounded-full bg-[#4585CA] px-4 py-2 font-medium text-white shadow-sm transition-transform hover:-translate-y-0.5 hover:bg-[#4585CA]"
         >
           Let&apos;s Talk
         </a>
