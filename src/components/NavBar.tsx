@@ -1,35 +1,32 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import Image from "next/image";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
 
 import {
   Sheet,
   SheetContent,
   SheetTrigger,
   SheetClose,
-} from '@/components/ui/sheet';
-
-
-
+} from "@/components/ui/sheet";
 
 const navLinks = [
   {
-    text: 'Projects',
-    link: '#projects',
+    text: "Projects",
+    link: "#projects",
   },
   {
-    text: 'About',
-    link: '#about',
+    text: "About",
+    link: "#about",
   },
   {
-    text: 'Behance',
-    link: 'https://www.behance.net/itskumarinidhi',
+    text: "Behance",
+    link: "https://www.behance.net/itskumarinidhi",
   },
   {
-    text: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/itskumarinidhi/',
+    text: "LinkedIn",
+    link: "https://www.linkedin.com/in/itskumarinidhi/",
   },
 ];
 
@@ -66,18 +63,26 @@ export default function NavBar() {
       </nav>
 
       {/* Mobile Menu */}
-     <MobileNav/>
+      <MobileNav />
     </header>
   );
 }
 
 function MobileNav() {
   return (
-     <Sheet>
+    <Sheet>
       {/* Hamburger */}
       <SheetTrigger asChild className="sm:hidden">
-        <button className="flex h-11 w-11 items-center justify-center rounded-full border border-zinc-200 bg-white">
-          <Menu size={20} />
+        <button
+          className="
+      flex h-11 w-14 flex-col items-center justify-center gap-1.5
+      rounded-full border border-zinc-200 bg-white
+      shadow-sm transition-all duration-300
+      hover:shadow-md
+    "
+        >
+          <span className="h-[1.5px] w-5 rounded-full bg-zinc-800" />
+          <span className="h-[1.5px] w-3 rounded-full bg-zinc-800" />
         </button>
       </SheetTrigger>
 
@@ -88,14 +93,9 @@ function MobileNav() {
         <div className="flex h-full flex-col px-8 pb-8 pt-6">
           {/* Top */}
           <div className="flex items-center justify-between">
-            <Image
-              src="/img/sign.svg"
-              alt="logo"
-              width={120}
-              height={40}
-            />
+            <Image src="/img/sign.svg" alt="logo" width={120} height={40} />
 
-            <SheetClose asChild >
+            <SheetClose asChild>
               <button className="flex h-11 w-11 items-center justify-center rounded-full bg-white shadow-sm">
                 <X size={18} />
               </button>
@@ -105,7 +105,11 @@ function MobileNav() {
           {/* Links */}
           <nav className="mt-16 flex flex-1 flex-col gap-5">
             {navLinks.map((item) => (
-              <SheetClose asChild key={item.text} className="flex justify-start">
+              <SheetClose
+                asChild
+                key={item.text}
+                className="flex justify-start"
+              >
                 <Link
                   href={item.link}
                   className="

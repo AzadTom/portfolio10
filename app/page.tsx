@@ -9,7 +9,7 @@ export default function Home() {
     <main className="px-5 sm:px-6">
       <HeroSection />
       <SkillSection/>
-      {/* <Experiece/> */}
+      <Experiece/>
       <ProjectSection/>
       <Footer/>
     </main>
